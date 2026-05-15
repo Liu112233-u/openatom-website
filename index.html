@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开放原子开源社团 - OpenAtom Open Source Club</title>
+    <meta name="description" content="开放原子开源社团官方网站，致力于推动中国开源生态发展，传播开源文化，培育开源人才。">
+    <meta name="keywords" content="开放原子,开源,OpenHarmony,openEuler,开源社团,开源基金会">
+    <meta name="author" content="开放原子开源社团">
+    <meta property="og:title" content="开放原子开源社团">
+    <meta property="og:description" content="推动全球开源事业发展，培育开源人才，建设开源生态。">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚛️</text></svg>">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="18" stroke="#00D4FF" stroke-width="2" fill="rgba(0,212,255,0.1)"/>
+                    <circle cx="20" cy="20" r="6" fill="#00D4FF"/>
+                    <ellipse cx="20" cy="20" rx="18" ry="8" stroke="#00D4FF" stroke-width="1.5" fill="none" transform="rotate(0 20 20)"/>
+                    <ellipse cx="20" cy="20" rx="18" ry="8" stroke="#00D4FF" stroke-width="1.5" fill="none" transform="rotate(60 20 20)"/>
+                    <ellipse cx="20" cy="20" rx="18" ry="8" stroke="#00D4FF" stroke-width="1.5" fill="none" transform="rotate(120 20 20)"/>
+                </svg>
+                <span>开放原子</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="切换菜单">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#projects">开源项目</a></li>
+                <li><a href="#activities">社团活动</a></li>
+                <li><a href="#news">新闻动态</a></li>
+                <li><a href="#partners">合作伙伴</a></li>
+                <li><a href="#join" class="nav-cta">加入我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section id="hero">
+        <canvas id="particles"></canvas>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>2026 年度活动已启动</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-title-line1">开放原子</span>
+                <span class="hero-title-line2">开源社团</span>
+            </h1>
+            <p class="hero-subtitle">推动全球开源事业发展 · 培育开源人才 · 建设开源生态</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num" data-target="3000000">0</span>
+                    <span class="stat-label">活跃开源项目</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num" data-target="2270000">0</span>
+                    <span class="stat-label">开源开发者</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num" data-target="16000">0</span>
+                    <span class="stat-label">开源模型 (模力方舟)</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="#about" class="btn btn-primary">了解我们</a>
+                <a href="#projects" class="btn btn-outline">探索项目</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>向下滚动</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ABOUT US</span>
+                <h2 class="section-title">关于我们</h2>
+                <p class="section-desc">开放原子开源基金会成立于2020年6月，是经民政部批准的非营利性基金会，也是中国首个开源基金会。</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card about-mission">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/><path d="M16 24l6 6 12-12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>我们的使命</h3>
+                    <p>秉持"一切为了开发者"的工作理念，完善项目孵化、社区治理、人才培养等全链条服务，依托多元渠道传播开源文化，为中国开源事业贡献力量。</p>
+                </div>
+                <div class="about-card about-vision">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
+                    </div>
+                    <h3>我们的愿景</h3>
+                    <p>建设具有全球影响力的开源创新高地，培育开源生态，推动中国开源事业融入世界舞台，让开源成为科技创新的核心驱动力。</p>
+                </div>
+                <div class="about-card about-value">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/><path d="M24 14v10l7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3>核心价值观</h3>
+                    <p>开放、协作、创新、共享。倡导开放透明的社区文化，鼓励跨领域协作，以创新驱动发展，成果惠及整个生态。</p>
+                </div>
+            </div>
+            <div class="about-timeline">
+                <h3 class="timeline-title">发展历程</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2020</span>
+                            <h4>基金会成立</h4>
+                            <p>开放原子开源基金会在民政部注册成立，成为中国首个开源基金会</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2023</span>
+                            <h4>开源鸿蒙根社区</h4>
+                            <p>开源鸿蒙正式宣布打造智能终端操作系统根社区</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2025</span>
+                            <h4>首批项目毕业</h4>
+                            <p>开源鸿蒙与开源欧拉成为首批毕业项目，AI开源根社区"模力方舟"上线</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2026</span>
+                            <h4>智能体工作组</h4>
+                            <p>筹备"智能体开源工作组"，推动AI与开源深度融合</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 开源项目 -->
+    <section id="projects" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">PROJECTS</span>
+                <h2 class="section-title">明星开源项目</h2>
+                <p class="section-desc">涵盖操作系统、人工智能、数据库、工具链等多个关键领域，为中国科技自立自强提供坚实底座。</p>
+            </div>
+            <div class="projects-grid">
+                <!-- 开源鸿蒙 -->
+                <div class="project-card project-featured">
+                    <div class="project-badge graduated">已毕业</div>
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <circle cx="32" cy="32" r="28" stroke="#00D4FF" stroke-width="2" fill="rgba(0,212,255,0.08)"/>
+                                <circle cx="32" cy="32" r="12" fill="rgba(0,212,255,0.15)"/>
+                                <path d="M32 8 L56 24 L56 40 L32 56 L8 40 L8 24 Z" stroke="#00D4FF" stroke-width="1.5" fill="none"/>
+                                <circle cx="32" cy="32" r="4" fill="#00D4FF"/>
+                            </svg>
+                        </div>
+                        <div class="project-title-group">
+                            <h3 class="project-name">开源鸿蒙</h3>
+                            <span class="project-name-en">OpenHarmony</span>
+                        </div>
+                    </div>
+                    <p class="project-desc">全场景智能终端操作系统根社区，历经10次大版本迭代，汇聚超9,700名核心贡献者，产出1.3亿行代码，500余家合作伙伴通过兼容性测评，覆盖金融、航天、医疗等10余个关键领域。</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-num">9,700+</span>
+                            <span class="meta-label">核心贡献者</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-num">1.3亿</span>
+                            <span class="meta-label">行代码</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-num">500+</span>
+                            <span class="meta-label">合作品牌</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">操作系统</span>
+                        <span class="tag">智能终端</span>
+                        <span class="tag">全场景</span>
+                        <span class="tag">IoT</span>
+                    </div>
+                    <a href="https://www.openharmony.cn/" target="_blank" class="project-link">访问官网 →</a>
+                </div>
+
+                <!-- 开源欧拉 -->
+                <div class="project-card project-featured">
+                    <div class="project-badge graduated">已毕业</div>
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <circle cx="32" cy="32" r="28" stroke="#34D399" stroke-width="2" fill="rgba(52,211,153,0.08)"/>
+                                <path d="M20 32 C20 20 44 20 44 32 C44 44 20 44 20 32" stroke="#34D399" stroke-width="2" fill="rgba(52,211,153,0.1)"/>
+                                <circle cx="32" cy="32" r="6" fill="#34D399" opacity="0.3"/>
+                                <circle cx="32" cy="32" r="3" fill="#34D399"/>
+                            </svg>
+                        </div>
+                        <div class="project-title-group">
+                            <h3 class="project-name">开源欧拉</h3>
+                            <span class="project-name-en">openEuler</span>
+                        </div>
+                    </div>
+                    <p class="project-desc">面向数字基础设施的操作系统，支持服务器、云计算、边缘计算等应用场景。以2.3万名贡献者、2,100余家成员单位的规模，服务超550万用户，在通信、能源等行业占据市场领先地位。</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-num">2.3万</span>
+                            <span class="meta-label">贡献者</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-num">2,100+</span>
+                            <span class="meta-label">成员单位</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-num">550万+</span>
+                            <span class="meta-label">服务用户</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">服务器OS</span>
+                        <span class="tag">云计算</span>
+                        <span class="tag">数字基础设施</span>
+                    </div>
+                    <a href="https://www.openeuler.org/" target="_blank" class="project-link">访问官网 →</a>
+                </div>
+
+                <!-- 模力方舟 -->
+                <div class="project-card">
+                    <div class="project-badge new">NEW 2025</div>
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <circle cx="32" cy="32" r="28" stroke="#A78BFA" stroke-width="2" fill="rgba(167,139,250,0.08)"/>
+                                <path d="M32 12 L32 52 M12 32 L52 32 M18 18 L46 46 M46 18 L18 46" stroke="#A78BFA" stroke-width="1.5" opacity="0.6"/>
+                                <circle cx="32" cy="32" r="10" stroke="#A78BFA" stroke-width="2" fill="rgba(167,139,250,0.1)"/>
+                                <text x="32" y="36" text-anchor="middle" fill="#A78BFA" font-size="10" font-weight="bold">AI</text>
+                            </svg>
+                        </div>
+                        <div class="project-title-group">
+                            <h3 class="project-name">模力方舟</h3>
+                            <span class="project-name-en">Model Ark</span>
+                        </div>
+                    </div>
+                    <p class="project-desc">国内首个AI开源根社区，已上线超16,000个开源模型与超10,000项数据集，为大模型时代提供开放、高效的模型共享与协作平台。</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-num">16,000+</span>
+                            <span class="meta-label">开源模型</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-num">10,000+</span>
+                            <span class="meta-label">数据集</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">AI</span>
+                        <span class="tag">大模型</span>
+                        <span class="tag">开源模型</span>
+                    </div>
+                    <a href="#" class="project-link">了解更多 →</a>
+                </div>
+
+                <!-- AtomGit -->
+                <div class="project-card">
+                    <div class="project-badge">开发者平台</div>
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <circle cx="32" cy="32" r="28" stroke="#F59E0B" stroke-width="2" fill="rgba(245,158,11,0.08)"/>
+                                <circle cx="32" cy="22" r="6" stroke="#F59E0B" stroke-width="2" fill="rgba(245,158,11,0.1)"/>
+                                <circle cx="20" cy="40" r="5" stroke="#F59E0B" stroke-width="2" fill="rgba(245,158,11,0.1)"/>
+                                <circle cx="44" cy="40" r="5" stroke="#F59E0B" stroke-width="2" fill="rgba(245,158,11,0.1)"/>
+                                <line x1="32" y1="28" x2="22" y2="36" stroke="#F59E0B" stroke-width="1.5"/>
+                                <line x1="32" y1="28" x2="42" y2="36" stroke="#F59E0B" stroke-width="1.5"/>
+                                <line x1="26" y1="40" x2="38" y2="40" stroke="#F59E0B" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <div class="project-title-group">
+                            <h3 class="project-name">AtomGit</h3>
+                            <span class="project-name-en">AtomGit</span>
+                        </div>
+                    </div>
+                    <p class="project-desc">开放原子官方开发者平台，提供代码托管、协作开发、CI/CD 等一站式服务。2026年将举办多场线下活动，包括"源启高校"走进南京大学、"G-Star Gathering Day"等。</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-num">全年</span>
+                            <span class="meta-label">开发者活动</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-num">多场</span>
+                            <span class="meta-label">线下活动</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">代码托管</span>
+                        <span class="tag">DevOps</span>
+                        <span class="tag">协作开发</span>
+                    </div>
+                    <a href="https://atomgit.com/" target="_blank" class="project-link">访问平台 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社团活动 -->
+    <section id="activities" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ACTIVITIES</span>
+                <h2 class="section-title">社团活动</h2>
+                <p class="section-desc">丰富多彩的技术活动、校园行、开发者大会，让开源文化深入人心。</p>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-card activity-featured">
+                    <div class="activity-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" stroke-width="2"/><path d="M4 16h40M16 4v12M32 4v12" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <span class="activity-date">2026年3月</span>
+                    <h3>开放原子园区行 · 上海站</h3>
+                    <p>拉开2026年全年活动序幕，走进上海各科技园区，推广开源文化与技术对接，促进企业开源协作。</p>
+                    <div class="activity-tags">
+                        <span>园区行</span><span>上海</span><span>开源文化</span>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/><path d="M24 14v10l7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <span class="activity-date">2026年持续</span>
+                    <h3>开放原子大赛</h3>
+                    <p>面向全国高校和企业的开源创新大赛，激发开发者创造力，发掘优秀开源项目与人才。</p>
+                    <div class="activity-tags">
+                        <span>大赛</span><span>创新</span>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><path d="M24 4 L4 14 L4 34 L24 44 L44 34 L44 14 Z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <span class="activity-date">2026年持续</span>
+                    <h3>校源行</h3>
+                    <p>开源文化进校园系列活动，走进全国各大高校，普及开源理念，培养下一代开源人才。</p>
+                    <div class="activity-tags">
+                        <span>校园行</span><span>教育</span>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2"/><path d="M8 18h32M18 18v22" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <span class="activity-date">2026年持续</span>
+                    <h3>OSPO 培训</h3>
+                    <p>开源项目办公室（OSPO）专业培训，帮助企业建立开源战略，规范开源治理，提升开源效能。</p>
+                    <div class="activity-tags">
+                        <span>培训</span><span>OSPO</span><span>治理</span>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/><path d="M14 24 C14 18 19 14 24 14 C29 14 34 18 34 24 C34 30 29 34 24 34 C19 34 14 30 14 24" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
+                    </div>
+                    <span class="activity-date">2026年持续</span>
+                    <h3>G-Star Gathering</h3>
+                    <p>开发者线下聚会系列，2026年武汉站等活动汇聚开发者面对面交流，促进项目协作与社区连接。</p>
+                    <div class="activity-tags">
+                        <span>开发者聚会</span><span>社区</span>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><path d="M8 36 L24 12 L40 36" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 28 L34 28" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="40" r="4" stroke="currentColor" stroke-width="2"/></svg>
+                    </div>
+                    <span class="activity-date">2026年持续</span>
+                    <h3>开源法务研讨</h3>
+                    <p>开源许可证合规、法律风险防控等专题研讨会，帮助企业和开发者规避法律风险，健康发展开源事业。</p>
+                    <div class="activity-tags">
+                        <span>法务</span><span>合规</span><span>Licenses</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻动态 -->
+    <section id="news" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">NEWS</span>
+                <h2 class="section-title">新闻动态</h2>
+                <p class="section-desc">了解开放原子开源基金会的最新资讯与行业动态。</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card news-featured">
+                    <div class="news-date-badge">
+                        <span class="news-day">11</span>
+                        <span class="news-month">2025.11</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category hot">重磅</span>
+                        <h3>开源鸿蒙与开源欧拉成为首批毕业项目</h3>
+                        <p>2025开放原子开发者大会上，基金会宣布开源鸿蒙与开源欧拉成为首批毕业项目，标志着项目在技术成熟度、社区治理与产业适配能力上达到行业领先标准。</p>
+                        <div class="news-highlights">
+                            <span>👍 9,700+ 核心贡献者</span>
+                            <span>📊 1.3亿 行代码</span>
+                            <span>🏢 500+ 合作伙伴</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-date-badge">
+                        <span class="news-day">23</span>
+                        <span class="news-month">2025.07</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">新社区</span>
+                        <h3>开放原子电鸿开源社区正式启动</h3>
+                        <p>由南方电网牵头成立的开放原子电鸿开源社区正式启动，这是基金会能源电力行业首个基于开源操作系统的全产业链开源应用社区。</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-date-badge">
+                        <span class="news-day">11</span>
+                        <span class="news-month">2026.03</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category ai">AI</span>
+                        <h3>基金会筹备"智能体开源工作组"</h3>
+                        <p>基金会计划联合产业、科研与法律界，筹备成立"智能体开源工作组"，推动面向智能体的系统级与应用级原生接口标准化建设。</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-date-badge">
+                        <span class="news-day">17</span>
+                        <span class="news-month">2026.04</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">活动</span>
+                        <h3>2026年度活动日历正式发布</h3>
+                        <p>基金会发布2026年度活动日历，涵盖年度品牌会议、校源行、园区行、开放原子大赛、开源项目系列活动、AtomGit开发者活动等全年重点活动安排。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作伙伴 -->
+    <section id="partners" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">PARTNERS</span>
+                <h2 class="section-title">合作伙伴</h2>
+                <p class="section-desc">汇聚产业力量，共建开源生态。与各行业领军企业、科研院所、高校携手，推动开源事业发展。</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" stroke="#2563EB" stroke-width="2"/><text x="24" y="30" text-anchor="middle" fill="#2563EB" font-size="12" font-weight="bold">华</text></svg>
+                    </div>
+                    <span>华为</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" stroke="#DC2626" stroke-width="2"/><text x="24" y="30" text-anchor="middle" fill="#DC2626" font-size="12" font-weight="bold">阿</text></svg>
+                    </div>
+                    <span>阿里巴巴</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" stroke="#F59E0B" stroke-width="2"/><text x="24" y="30" text-anchor="middle" fill="#F59E0B" font-size="12" font-weight="bold">腾</text></svg>
+                    </div>
+                    <span>腾讯</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" stroke="#059669" stroke-width="2"/><text x="24" y="30" text-anchor="middle" fill="#059669" font-size="12" font-weight="bold">京</text></svg>
+                    </div>
+                    <span>京东</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" stroke="#7C3AED" stroke-width="2"/><text x="24" y="30" text-anchor="middle" fill="#7C3AED" font-size="12" font-weight="bold">网</text></svg>
+                    </div>
+                    <span>网易</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" stroke="#0891B2" stroke-width="2"/><text x="24" y="30" text-anchor="middle" fill="#0891B2" font-size="12" font-weight="bold">电</text></svg>
+                    </div>
+                    <span>南方电网</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" stroke="#BE185D" stroke-width="2"/><text x="24" y="30" text-anchor="middle" fill="#BE185D" font-size="12" font-weight="bold">中</text></svg>
+                    </div>
+                    <span>中科院</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" stroke="#EA580C" stroke-width="2"/><text x="24" y="30" text-anchor="middle" fill="#EA580C" font-size="12" font-weight="bold">清</text></svg>
+                    </div>
+                    <span>清华大学</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" stroke="#0D9488" stroke-width="2"/><text x="24" y="30" text-anchor="middle" fill="#0D9488" font-size="12" font-weight="bold">北</text></svg>
+                    </div>
+                    <span>北京大学</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" stroke="#9333EA" stroke-width="2"/><text x="24" y="30" text-anchor="middle" fill="#9333EA" font-size="12" font-weight="bold">电</text></svg>
+                    </div>
+                    <span>中国电子</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" stroke="#16A34A" stroke-width="2"/><text x="24" y="30" text-anchor="middle" fill="#16A34A" font-size="12" font-weight="bold">移</text></svg>
+                    </div>
+                    <span>中国移动</span>
+                </div>
+                <div class="partner-item partner-more">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="16" r="3" fill="currentColor"/><circle cx="16" cy="28" r="3" fill="currentColor"/><circle cx="32" cy="28" r="3" fill="currentColor"/></svg>
+                    </div>
+                    <span>更多伙伴</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 加入我们 -->
+    <section id="join" class="section section-gradient">
+        <div class="container">
+            <div class="join-wrapper">
+                <div class="join-info">
+                    <span class="section-tag">JOIN US</span>
+                    <h2>加入我们</h2>
+                    <p>无论你是学生、开发者还是企业，开放原子开源社团都欢迎你的加入。让我们一起推动中国开源事业的发展！</p>
+                    <div class="join-ways">
+                        <div class="join-way">
+                            <div class="join-way-icon">
+                                <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/><path d="M10 16l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                            <div>
+                                <h4>成为贡献者</h4>
+                                <p>参与开源项目贡献代码、文档、测试，与全球开发者协作</p>
+                            </div>
+                        </div>
+                        <div class="join-way">
+                            <div class="join-way-icon">
+                                <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="4" fill="currentColor"/></svg>
+                            </div>
+                            <div>
+                                <h4>加入社团</h4>
+                                <p>加入当地开源社团，参与技术分享、社区活动和志愿者工作</p>
+                            </div>
+                        </div>
+                        <div class="join-way">
+                            <div class="join-way-icon">
+                                <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/><path d="M16 8v8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                            <div>
+                                <h4>企业合作</h4>
+                                <p>与基金会合作，共建开源生态，推动行业开源标准化</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="join-form-wrapper">
+                    <form class="join-form" id="joinForm">
+                        <h3>立即报名</h3>
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" name="email" placeholder="请输入您的邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="identity">身份</label>
+                            <select id="identity" name="identity" required>
+                                <option value="">请选择您的身份</option>
+                                <option value="student">在校学生</option>
+                                <option value="developer">在职开发者</option>
+                                <option value="teacher">高校教师</option>
+                                <option value="enterprise">企业代表</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">感兴趣的方向</label>
+                            <select id="interest" name="interest" required>
+                                <option value="">请选择感兴趣的方向</option>
+                                <option value="openharmony">开源鸿蒙 (OpenHarmony)</option>
+                                <option value="openeuler">开源欧拉 (openEuler)</option>
+                                <option value="ai">人工智能 / 模力方舟</option>
+                                <option value="tools">开发工具 / DevOps</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-group-full">
+                            <label for="message">留言（可选）</label>
+                            <textarea id="message" name="message" rows="3" placeholder="想对我们说些什么？"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>提交申请</span>
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                    </form>
+                    <div class="form-success" id="formSuccess" style="display:none;">
+                        <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#34D399" stroke-width="3"/><path d="M20 32l8 8 16-16" stroke="#34D399" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <h3>提交成功！</h3>
+                        <p>感谢您的报名，我们的工作人员会尽快与您联系。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="18" stroke="#00D4FF" stroke-width="2" fill="rgba(0,212,255,0.1)"/>
+                            <circle cx="20" cy="20" r="6" fill="#00D4FF"/>
+                            <ellipse cx="20" cy="20" rx="18" ry="8" stroke="#00D4FF" stroke-width="1.5" fill="none" transform="rotate(0 20 20)"/>
+                            <ellipse cx="20" cy="20" rx="18" ry="8" stroke="#00D4FF" stroke-width="1.5" fill="none" transform="rotate(60 20 20)"/>
+                            <ellipse cx="20" cy="20" rx="18" ry="8" stroke="#00D4FF" stroke-width="1.5" fill="none" transform="rotate(120 20 20)"/>
+                        </svg>
+                        <span>开放原子开源社团</span>
+                    </div>
+                    <p>推动全球开源事业发展，培育开源人才，建设开源生态。</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                        </a>
+                        <a href="#" aria-label="微信公众号">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.627-.132c.94.205 1.94.316 2.965.316 1.884 0 3.613-.538 5.138-1.509.282-.177.47-.464.513-.787l.263-1.927a.626.626 0 01.5-.523c2.63-.82 4.395-2.86 4.395-5.088 0-3.037-2.98-5.482-6.656-5.482zm3.632 14.304c-1.336.742-2.947 1.129-4.72 1.129-1.194 0-2.31-.166-3.322-.494a.557.557 0 01-.399-.52l.128-1.47a.583.583 0 01.313-.469c1.639-.745 2.8-2.186 2.8-3.93 0-1.262-.365-2.447-1.026-3.33.682 1.346 1.656 2.365 3.215 2.365.42 0 .79-.072 1.103-.213a.585.585 0 01.55.083l1.687 1.376a.583.583 0 01.186.441l.057 1.617a.625.625 0 01-.23.515c-.47.404-1.144.74-2.042 1.002zm-.88-6.673c-.406 0-.734.33-.734.736 0 .406.328.734.734.734.406 0 .734-.328.734-.734 0-.406-.328-.736-.734-.736zm2.589 0c-.406 0-.734.33-.734.736 0 .406.328.734.734.734.406 0 .734-.328.734-.734 0-.406-.328-.736-.734-.736z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Bilibili">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a3.415 3.415 0 00-1.07-.773 3.67 3.67 0 00-1.211-.44 3.67 3.67 0 00-1.211.067 3.57 3.57 0 00-1.085.454 3.53 3.53 0 00-.84.8l-.933 1.253-.76 1.013-.32-.32 1.88-2.506.107-.16a3.84 3.84 0 011.173-.8 4.13 4.13 0 011.44-.267 4.13 4.13 0 011.44.267 3.73 3.73 0 011.24.813l.107.16 1.88 2.506-.32.32-.32-.413-.533-.747-.694-.987-.187.24-1.08 1.44a3.3 3.3 0 00-.32.453c-.107.187-.187.4-.24.64-.107.267-.133.507-.08.72.107.493.373.92.8 1.28.427.36.987.546 1.68.56h2.987c.107-.4.107-.826 0-1.28-.107-.24-.267-.44-.48-.6a2.6 2.6 0 00-.667-.4 2.6 2.6 0 00-.773-.24 2.6 2.6 0 00-.773.053 2.6 2.6 0 00-.72.28 2.6 2.6 0 00-.56.427 2.6 2.6 0 00-.374.534l-.48.827zm-4.373 3.2v5.654l-2.133-2.827-2.134 2.827V7.853h4.267zm-4.267 7.893h4.267v.693l-2.133 1.2-2.134-1.2v-.693zm9.307-6.48c-.32-.107-.546-.28-.68-.52-.133-.24-.16-.546-.08-.92.16-.693.666-1.2 1.52-1.52.453-.213.933-.32 1.44-.32.48 0 .907.107 1.28.32.373.213.64.466.8.76.16.293.213.58.16.866-.053.507-.293.907-.72 1.2-.427.293-.987.44-1.68.44h-1.28v-.48l.747-.693-.747-.693v-.48zm-3.467 6.373c0-.32.107-.6.32-.84.213-.24.507-.374.88-.4.587-.107.96-.36 1.12-.76.16-.4.107-.813-.16-1.24-.267-.427-.72-.747-1.36-.96-.64-.213-1.307-.32-2-.32-.667 0-1.253.107-1.76.32-.507.213-.893.507-1.16.88-.267.373-.373.787-.32 1.24.08.4.293.733.64 1 .347.267.76.4 1.24.4.72 0 1.24-.28 1.56-.84.32-.56.267-1.253-.16-2.08l-.107-.213h-.107c-.347.053-.613.213-.8.48-.187.267-.32.6-.4 1l-.053.48v.053l.533.32c-.107.373-.133.747-.08 1.12.053.533.267.946.64 1.24.373.293.867.44 1.48.44.533 0 .96-.133 1.28-.4.32-.267.48-.627.48-1.08zm-5.52 0v.8l-.534-.32c-.053-.027-.107-.053-.16-.053s-.107.027-.16.053l-.534.32v-.8l-.32-.187v-.16l.32-.187.32-.187h.373l.32.187.32.187v.16l-.32.187zm2.773-1.44c0-.373-.16-.693-.48-.96-.32-.267-.76-.4-1.32-.4-.587 0-1.04.147-1.36.44-.32.293-.48.613-.48.96 0 .32.107.6.32.84.213.24.507.36.88.36.4 0 .747-.133 1.04-.4.293-.267.44-.587.44-.96zm-.8 7.413c0-.293.107-.56.32-.8.213-.24.507-.36.88-.36.693 0 1.133-.267 1.32-.8.187-.533.053-1.2-.4-2l-.213-.347h-.107a1.3 1.3 0 00-.72.413c-.187.24-.32.533-.4.88l-.08.534-.053.374.534.32c-.08.32-.107.667-.08 1.04.053.56.293 1 .72 1.32.427.32.973.48 1.64.48.56 0 1.013-.133 1.36-.4.347-.267.52-.627.52-1.08 0-.4-.16-.72-.48-1l-.32-.28.533-.533.374-.374.48-.48.107-.107.107.053.16.107c.053.053.107.107.16.16.053.053.08.107.107.16l.054.107.16.16.053.107.053.16v.053l-.053.107-.16.107-.32.213-.533.347-.64.4-.694.4-.666.347h-.534c-.187-.053-.4-.133-.64-.24a2.47 2.47 0 00-.667-.24 2.47 2.47 0 00-.667.053 2.47 2.47 0 00-.627.24 2.47 2.47 0 00-.48.373 2.47 2.47 0 00-.32.453l-.214.507v.64c0 .32.107.6.32.84.213.24.507.36.88.36.373 0 .72-.133 1.04-.4.32-.267.48-.587.48-.96zm3.414-.107V19.2h4.214v.8l-.747.693.747.693v.8l-.373.187-.373.187h-.4l-.374-.187-.374-.187v-.16l.374-.187.374-.187h.4l.373.187.373.187v.16l-.373.187-.374.187h-3.84v.053z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="https://www.openatom.cn/" target="_blank">开放原子基金会官网</a></li>
+                        <li><a href="https://www.openharmony.cn/" target="_blank">开源鸿蒙官网</a></li>
+                        <li><a href="https://www.openeuler.org/" target="_blank">openEuler 官网</a></li>
+                        <li><a href="https://atomgit.com/" target="_blank">AtomGit 平台</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>社区资源</h4>
+                    <ul>
+                        <li><a href="#">开发者文档</a></li>
+                        <li><a href="#">开源许可证</a></li>
+                        <li><a href="#">行为准则</a></li>
+                        <li><a href="#">安全公告</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="mailto:contact@openatom.cn">contact@openatom.cn</a></li>
+                        <li><a href="#">合作咨询</a></li>
+                        <li><a href="#">媒体合作</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 开放原子开源社团 · OpenAtom Open Source Club · 京ICP备XXXXXXXX号</p>
+                <p>Built with ❤️ for the open source community</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
